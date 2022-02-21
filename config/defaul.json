@@ -3,17 +3,13 @@
         "mongodb": {
             "host": "cluster0.ssazx.mongodb.net",
             "user": "acad_rest_api_user",
-            "password": "nteePFjDyc4aAm2y",
+            "password": "r7SLXEB00w4VbyAR",
             "dbname": "AcademicDB"
         }
     },
     "secretkeys": {
         "cryptojs": "MLz8vMhQ2jxE",
         "jwt": "ABC@2020*"
-    },
-    "roles": {
-        "student": 1,
-        "teacher": 2
     },
     "server-port": 3000,
     "sessionTime": 3600

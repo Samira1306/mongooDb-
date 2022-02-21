@@ -1,6 +1,5 @@
 /** packages */
 const mongoose = require("mongoose");
-const validator = require("mongoose-unique-validator");
 
 /** Schema creation */
 const petsSchema = new mongoose.Schema({ 
@@ -34,5 +33,4 @@ const petsSchema = new mongoose.Schema({
 });
 
 /** schema exportation */
-petsSchema.plugin(validator);
 module.exports = petsSchema;
