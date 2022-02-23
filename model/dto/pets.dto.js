@@ -1,6 +1,6 @@
 /** packages */
 const mongoose = require("mongoose");
-const db = require("../db-connection/mongodb");
+const db = require("../db-conections/mongodb");
 
 /** using schema */
 const schema = require("../schemas/pets.schema");
@@ -13,7 +13,7 @@ schema.statics = {
     getAll: function (query, cb){
         this.find(query, cb);
     },
-    getByCode: function (query, cb){
+    getByName: function (query, cb){
         this.find(query, cb);
     },
     update: function (query, data, cb){

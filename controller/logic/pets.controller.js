@@ -3,11 +3,11 @@ const petsDto = require("../../model/dto/pets.dto");
 const config = require("config");
 
 /** Helper */
-const helper = require("../helpers/general.helper");
-const notHelper = require("../helpers/notification.helper");
+const helper = require("../helpers/general.helpers");
+const notHelper = require("../helpers/notification.helpers");
 
-exports.createPets = (req, res, next) => {
-    let pts = {
+exports.createPet = (req, res, next) => {
+    let pets = {
         contact: req.body.contanct,
         petname: req.body.petname,
         service: req.body.service,
@@ -15,7 +15,7 @@ exports.createPets = (req, res, next) => {
         petAge: req.body.petAge,
         petBreed: req.body.petBreed
     };
-    petsDto.create(pts, (err, data) => {
+    petsDto.create(pets, (err, data) => {
         if (err) {
             return res.status(400).json(
                 {
@@ -29,7 +29,7 @@ exports.createPets = (req, res, next) => {
 
 
 exports.updatepets = (req, res, next) => {
-    let pts = {
+    let pets = {
         code: req.body.code,
         name: req.body.name,
         lastName: req.body.lastName,
@@ -37,7 +37,7 @@ exports.updatepets = (req, res, next) => {
         phone: req.body.phone,
         career: req.body.career
     };
-    petsDto.update({ _id: req.body.id }, pts, (err, data) => {
+    petsDto.update({ _id: req.body.id }, pets, (err, data) => {
         if (err) {
             return res.status(400).json(
                 {
